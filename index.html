@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+        <meta name="title" content="Meta Generator"></meta>
+        <meta name="description" content="A basic Meta Tag Generator page to help you create and customize HTML meta tags for your website. Improve your SEO and website optimization with ease."></meta>
+        <meta name="keywords" content="meta tags, meta generator, HTML meta tags, SEO, website optimization, meta tag generator, HTML, web development"></meta>
+        <meta name="robots" content="index, follow"></meta>
+        <meta name="author" content="Ali Amen"></meta>
+        <meta name="revisit-after" content="2 days"></meta>
+        <title>Meta Generator</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>Meta Generator</h1>
+        <form onsubmit="printFormData(event)">
+            <label for="title">Site Title (Characters left: 70)</label>
+            <br>
+            <input
+                type="text"
+                id="title"
+                name="title"
+                maxlength="70"
+            >
+            <br>
+            <br>
+            <label for="description">Site Description (Characters left: 150)</label>
+            <br>
+            <textarea id="description" name="description" maxlength="150"></textarea>
+            <br>
+            <br>
+            <label for="keywords">Site Keywords (Separate with commas)</label>
+            <br>
+            <textarea id="keywords" name="keywords" placeholder="keyword1, keyword2, keyword3"></textarea>
+            <br>
+            <br>
+            <label for="robots">Robots:</label>
+            <br>
+            <select id="robots" name="robots">
+                <option value="index, follow">Index, Follow</option>
+                <option value="index, nofollow">Index, No Follow</option>
+                <option value="noindex, follow">No Index, Follow</option>
+                <option value="noindex, nofollow">No Index, No Follow</option>
+            </select>
+            <br>
+            <br>
+            <label for="author">Author:</label>
+            <br>
+            <input type="text" id="author" name="author">
+            <br>
+            <br>
+            <label for="language">Language</label>
+            <br>
+            <select id="language" name="language">
+                <option value="0">No Language Tag</option>
+                <option value="Arabic">Arabic</option>
+                <option value="English">English</option>
+            </select>
+            <br>
+            <br>
+            <label for="revisit-after">Revisit After(By Days)</label>
+            <br>
+            <input
+                type="number"
+                id="revisit-after"
+                name="revisit-after"
+                min="0"
+                max="10"
+                value="0"
+            >
+            <br>
+            <br>
+            <label for="refresh">Refresh(By Seconds)</label>
+            <br>
+            <input
+                type="number"
+                id="refresh"
+                name="refresh"
+                value="0"
+            >
+            <br>
+            <br>
+            <input type="submit" value="Generate">
+            <br>
+            <hr>
+        </form>
+        <textarea id="result" disabled></textarea>
+    </body>
+</html>
