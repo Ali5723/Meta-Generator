@@ -1,86 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+        <!-- Primary Meta Tags -->
+        <title>Meta Generator</title>
         <meta name="title" content="Meta Generator"></meta>
         <meta name="description" content="A basic Meta Tag Generator page to help you create and customize HTML meta tags for your website. Improve your SEO and website optimization with ease."></meta>
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website"></meta>
+        <meta property="og:url" content="https://ali5723.github.io/metaGenerator/"></meta>
+        <meta property="og:title" content="Meta Generator"></meta>
+        <meta property="og:description" content="A basic Meta Tag Generator page to help you create and customize HTML meta tags for your website. Improve your SEO and website optimization with ease."></meta>
+        <meta property="og:image" content="https://ali5723.github.io/metaGenerator/image.jpeg"></meta>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta name="twitter:url" content="https://ali5723.github.io/metaGenerator/"></meta>
+        <meta name="twitter:title" content="Meta Generator"></meta>
+        <meta name="twitter:description" content="A basic Meta Tag Generator page to help you create and customize HTML meta tags for your website. Improve your SEO and website optimization with ease."></meta>
+        <meta name="twitter:image" content="https://ali5723.github.io/metaGenerator/image.jpeg"></meta>
+        <!-- Optional Meta Tags -->
         <meta name="keywords" content="meta tags, meta generator, HTML meta tags, SEO, website optimization, meta tag generator, HTML, web development"></meta>
         <meta name="robots" content="index, follow"></meta>
+        <meta name="content-type" content="text/html; charset=utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <meta name="author" content="Ali Amen"></meta>
-        <meta name="revisit-after" content="2 days"></meta>
-        <title>Meta Generator</title>
+        <meta name="revisit-after" content="1"></meta>
+        <!-- Meta Tags Generated with https://ali5723.github.io/metaGenerator/ -->
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
     </head>
     <body>
         <h1>Meta Generator</h1>
         <form onsubmit="printFormData(event)">
-            <label for="title">Site Title (Characters left: 70)</label>
-            <br>
-            <input
-                type="text"
-                id="title"
-                name="title"
-                maxlength="70"
-            >
-            <br>
-            <br>
-            <label for="description">Site Description (Characters left: 150)</label>
-            <br>
-            <textarea id="description" name="description" maxlength="150"></textarea>
-            <br>
-            <br>
-            <label for="keywords">Site Keywords (Separate with commas)</label>
-            <br>
-            <textarea id="keywords" name="keywords" placeholder="keyword1, keyword2, keyword3"></textarea>
-            <br>
-            <br>
-            <label for="robots">Robots:</label>
-            <br>
-            <select id="robots" name="robots">
-                <option value="index, follow">Index, Follow</option>
-                <option value="index, nofollow">Index, No Follow</option>
-                <option value="noindex, follow">No Index, Follow</option>
-                <option value="noindex, nofollow">No Index, No Follow</option>
-            </select>
-            <br>
-            <br>
-            <label for="author">Author:</label>
-            <br>
-            <input type="text" id="author" name="author">
-            <br>
-            <br>
-            <label for="language">Language</label>
-            <br>
-            <select id="language" name="language">
-                <option value="0">No Language Tag</option>
-                <option value="Arabic">Arabic</option>
-                <option value="English">English</option>
-            </select>
-            <br>
-            <br>
-            <label for="revisit-after">Revisit After(By Days)</label>
-            <br>
-            <input
-                type="number"
-                id="revisit-after"
-                name="revisit-after"
-                min="0"
-                max="10"
-                value="0"
-            >
-            <br>
-            <br>
-            <label for="refresh">Refresh(By Seconds)</label>
-            <br>
-            <input
-                type="number"
-                id="refresh"
-                name="refresh"
-                value="0"
-            >
-            <br>
+            <div id="title-div">
+                <label for="title">Site Title (Characters left: 70)</label>
+                <br>
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    maxlength="70"
+                    required
+                >
+            </div>
+            <div id="description-div">
+                <label for="description">Site Description (Characters left: 150)</label>
+                <br>
+                <textarea
+                    id="description"
+                    name="description"
+                    maxlength="150"
+                    required
+                ></textarea>
+            </div>
+            <div id="charset-div">
+                <label for="charset">Charset</label>
+                <br>
+                <select id="charset" name="charset" required>
+                    <option value="utf-8">UTF-8</option>
+                    <option value="iso-8859-1">ISO-8859-1</option>
+                    <option value="windows-1252">Windows-1252</option>
+                </select>
+            </div>
+            <div id="keywords-div">
+                <label for="keywords">Site Keywords (Separate with commas)</label>
+                <br>
+                <textarea id="keywords" name="keywords" placeholder="keyword1, keyword2, keyword3"></textarea>
+            </div>
+            <div id="url-div">
+                <label for="url">Site URL</label>
+                <br>
+                <input
+                    type="url"
+                    id="url"
+                    name="url"
+                    placeholder="https://www.example.com"
+                >
+            </div>
+            <div id="image-div">
+                <label for="image">Image URL</label>
+                <br>
+                <input
+                    type="url"
+                    id="image"
+                    name="image"
+                    placeholder="https://www.example.com/image.jpg"
+                >
+            </div>
+            <div id="author-div">
+                <label for="author">Author</label>
+                <br>
+                <input type="text" id="author" name="author">
+            </div>
+            <div id="language-div">
+                <label for="language">Language</label>
+                <br>
+                <select id="language" name="language">
+                    <option value="0">No Language Tag</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="English">English</option>
+                </select>
+            </div>
+            <div id="robots-div">
+                <label for="robots">Robots</label>
+                <br>
+                <select id="robots" name="robots">
+                    <option value="index, follow">Index, Follow</option>
+                    <option value="index, nofollow">Index, No Follow</option>
+                    <option value="noindex, follow">No Index, Follow</option>
+                    <option value="noindex, nofollow">No Index, No Follow</option>
+                </select>
+            </div>
+            <div id="revisit-after-div">
+                <label for="revisit-after">Robots Revisit After(By Days)</label>
+                <br>
+                <input
+                    type="number"
+                    id="revisit-after"
+                    name="revisit-after"
+                    min="0"
+                    max="10"
+                    value="0"
+                >
+            </div>
+            <div id="refresh-div">
+                <label for="refresh">Refresh(By Seconds)</label>
+                <br>
+                <input
+                    type="number"
+                    id="refresh"
+                    name="refresh"
+                    min="0"
+                    value="0"
+                >
+            </div>
             <br>
             <input type="submit" value="Generate">
             <br>
